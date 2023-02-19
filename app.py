@@ -25,7 +25,7 @@ JOBS = [
     'id': 4,
     'title': 'Backend Engineer',
     'location': 'San Francisco, USA',
-    'salary': '$120,000'
+    'salary': '$150,000'
   }
 ]
 
@@ -34,9 +34,11 @@ JOBS = [
 def hello_world():
   return render_template('home.html', jobs=JOBS, company_name='Jovian')
 
+
 @app.route("/api/jobs")
 def list_jobs():
   return jsonify(JOBS)
+
 
 if __name__ == "__main__":
   app.run(host="0.0.0.0", debug=True)
